@@ -255,7 +255,7 @@ li a {
 
 @media screen and (max-width: 400px) {
   .carousel-item-custom {
-    width: 300px;
+    width: 310px;
   }
   .hover-meta {
     padding: 2rem;
