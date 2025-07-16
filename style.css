@@ -1,0 +1,263 @@
+@import url("https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&family=Roboto:ital,wght@0,100..900;1,100..900&display=swap");
+
+* {
+  font-family: "Poppins", sans-serif;
+  text-decoration: none;
+  list-style: none;
+}
+li a {
+  text-decoration: none;
+  list-style: none;
+}
+
+:root {
+  --color1: #666666;
+  --color2: #a13a3a;
+  --color3: #37aaec;
+}
+
+.hero {
+  max-height: 100vh;
+  height: 100%;
+}
+.nav-item a {
+  text-decoration: none;
+  position: relative;
+  transition: color 0.3s ease;
+}
+
+.color-custom {
+  color: var(--color2) !important;
+}
+
+.text-blur {
+  color: var(--color1) !important;
+}
+.text-color {
+  color: var(--color3) !important ;
+}
+
+.nav-item a::after {
+  content: "";
+  position: absolute;
+  width: 0%;
+  height: 2px;
+  bottom: -4px;
+  left: 0;
+  background-color: #030303;
+  transition: width 0.3s ease;
+}
+
+.nav-item a:hover {
+  color: #00ffff;
+}
+
+.nav-item a:hover::after {
+  width: 100%;
+}
+
+.btn-custom {
+  max-width: 8rem;
+  height: 3rem;
+  width: 100%;
+}
+.custom-li li span {
+  display: inline-block;
+  word-break: break-word;
+  max-width: 100%;
+}
+.custom-li li {
+  display: flex;
+  align-items: flex-start;
+}
+
+.text-custom {
+  text-align: justify;
+}
+
+.icon ul {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  position: absolute;
+  /* top: 50%;*/
+  left: 48%;
+  transform: translate(-50%, -50%);
+}
+
+.icon ul li {
+  list-style: none;
+}
+
+.icon ul li a {
+  width: 60px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 60px;
+  background-color: #fff;
+  /* text-align: center; */
+  font-size: 35px;
+  margin: 0px;
+  display: block;
+  border-radius: 50%;
+  position: relative;
+  overflow: hidden;
+  border: 3px solid #fff;
+  z-index: 1;
+}
+
+.icon ul li a i {
+  position: relative;
+  color: #262626;
+  left: 4px;
+  transition: 0.5s;
+  z-index: 3;
+}
+
+.icon ul li a:hover i {
+  color: #fff;
+  transform: rotateY(360deg);
+}
+
+.icon ul li a:before {
+  content: "";
+  position: absolute;
+  top: 100%;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: #f00;
+  transition: 0.5s;
+  z-index: 2;
+}
+
+.icon ul li a:hover:before {
+  top: 0;
+}
+
+.icon ul li:nth-child(4) a:before {
+  background: #3b5999;
+}
+
+.icon ul li:nth-child(2) a:before {
+  background: #55acee;
+}
+
+.icon ul li:nth-child(3) a:before {
+  background: #33b500;
+}
+.wa {
+  background: #33b500;
+  color: white;
+  padding: 8px 16px;
+
+  border-radius: 50%;
+}
+
+.icon ul li:nth-child(1) a:before {
+  background: #292423;
+}
+
+/* 1. Pulse Animation */
+.btn-pulse {
+  background-color: #3498db;
+  color: white;
+  animation: pulse 1.5s infinite;
+}
+
+.animate_pulse {
+  animation: pulse 2s infinite;
+}
+@keyframes pulse {
+  0% {
+    transform: scale(1);
+  }
+  50% {
+    transform: scale(1.1);
+  }
+  100% {
+    transform: scale(1);
+  }
+}
+
+/* #container img {
+
+  transition: all 0.3s ease-out;
+  position: relative;
+  z-index: 1;
+}
+
+#container:hover img {
+  transform: scale(1.2, 1.2);
+  z-index: 9;
+} */
+
+/* carousol */
+.scroll-carousel {
+  display: flex;
+  overflow-x: auto;
+  scroll-snap-type: x mandatory;
+  gap: 1.5rem;
+  padding-bottom: 1rem;
+}
+
+.scroll-carousel::-webkit-scrollbar {
+  display: none;
+}
+
+.carousel-item-custom {
+  flex: 0 0 auto;
+  width: 280px;
+  scroll-snap-align: center;
+  position: relative;
+  border-radius: 8px;
+  overflow: hidden;
+  background-color: #222;
+}
+
+.carousel-item-custom img {
+  width: 100%;
+  aspect-ratio: 4/5;
+  object-fit: cover;
+}
+
+.hover-meta {
+  position: absolute;
+  bottom: 0;
+  background: rgba(0, 0, 0, 0.7);
+  color: white;
+  padding: 1.2rem;
+  width: 100%;
+  transform: translateY(100%);
+  transition: transform 0.3s ease-in-out;
+}
+
+.carousel-item-custom:hover .hover-meta {
+  transform: translateY(0);
+}
+
+.wa:hover {
+  color: #33b500;
+  background: #faf6f6;
+  border: 1px solid #33b500;
+  transition: 0.3s;
+}
+
+@media screen and (max-width: 600px) {
+  .carousel-item-custom {
+    width: 380px;
+  }
+  .hover-meta {
+    padding: 3rem;
+  }
+}
+
+@media screen and (max-width: 400px) {
+  .carousel-item-custom {
+    width: 300px;
+  }
+  .hover-meta {
+    padding: 2rem;
+  }
+}
