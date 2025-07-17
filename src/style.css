@@ -150,7 +150,8 @@ li a {
 .wa {
   background: #33b500;
   color: white;
-  padding: 7px 14px;
+
+  padding: 0px 7px;
   text-align: center;
   border-radius: 50%;
 }
