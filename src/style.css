@@ -147,13 +147,15 @@ li a {
 .icon ul li:nth-child(3) a:before {
   background: #33b500;
 }
+
 .wa {
   background: #33b500;
   color: white;
+  font-size: 4rem;
 
-  padding: 0px 7px;
+  /* padding: 2px 10px; */
   text-align: center;
-  border-radius: 50%;
+  /* border-radius: 50%; */
 }
 
 .icon ul li:nth-child(1) a:before {
@@ -260,5 +262,9 @@ li a {
   }
   .hover-meta {
     padding: 2rem;
+  }
+  .wa {
+    font-size: 3rem;
+    margin-bottom: 10px;
   }
 }
